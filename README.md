@@ -1,5 +1,7 @@
 # vagrant-docker-digital-ocean
 
+![](http://blog.glidenote.com/images/2013/12/vagrant-docker-digital-ocean.png)
+
 ## これは何
 
  * [Vagrant](http://www.vagrantup.com/)を利用して、[DigitalOcean](https://www.digitalocean.com/?refcode=510a665458a3)にCentOS 6.5 + Dockerな環境をコマンド一発(`vagrant up --provider=digital_ocean --provision`)で構築します。
