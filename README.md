@@ -1,4 +1,4 @@
-# vagrant-docker-digital-ocean
+# vagrant-docker-digitalocean
 
 ![](http://blog.glidenote.com/images/2013/12/vagrant-docker-digital-ocean.png)
 
@@ -45,7 +45,7 @@ brew install curl-ca-bundle
 1. このリポジトリをclone
 
     ``` sh
-    git clone https://github.com/glidenote/vagrant-docker-digital-ocean.git
+    git clone https://github.com/glidenote/vagrant-docker-digitalocean.git
     ```
 
 1. `Vagrantfile`を下記部分を自分の環境に合わせて修正。
