@@ -16,10 +16,9 @@ Vagrant.configure('2') do |config|
     provider.ca_path              = '/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt'
   end
 
-  # update kernel and install docker-id
   config.vm.provision :shell, :inline => <<-EOT
     rpm -Uvh http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
-    yum -y install kernel
+    yum -y upgrade
     yum -y install docker-io
     chkconfig docker on
     service docker start
