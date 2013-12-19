@@ -5,7 +5,7 @@
 ## これは何
 
  * [Vagrant](http://www.vagrantup.com/)を利用して、[DigitalOcean](https://www.digitalocean.com/?refcode=510a665458a3)にCentOS 6.5+Dockerな環境をコマンド一発(`vagrant up --provider=digital_ocean --provision`)で構築します。
- * CentOS 6.5より[Docker](https://www.docker.io/)がサポートされていますが、2013年12月19日現在DigitalOceanではCentOS 6.5のimageが提供されていませんが、これを利用することで簡単にCentOS6.5+Dockerが利用可能になります。
+ * CentOS 6.5より[Docker](https://www.docker.io/)がサポートされていますが、2013年12月19日現在DigitalOceanではCentOS 6.5のimageが提供されていません。これを利用することで簡単にCentOS6.5+Dockerが利用可能になります。
  * 安く、SSDで高速な開発環境を簡単に構築できます。
 
 ## 事前準備
