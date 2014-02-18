@@ -5,7 +5,7 @@
 ## これは何
 
  * [Vagrant](http://www.vagrantup.com/)を利用して、[DigitalOcean](https://www.digitalocean.com/?refcode=510a665458a3)にCentOS 6.5+Dockerな環境をコマンド一発(`vagrant up --provider=digital_ocean --provision`)で構築します。
- * CentOS 6.5より[Docker](https://www.docker.io/)がサポートされていますが、2013年12月19日現在DigitalOceanではCentOS 6.5のimageが提供されていません。これを利用することで簡単にCentOS6.5+Dockerが利用可能になります。
+ * CentOS 6.5より[Docker](https://www.docker.io/)がサポートされていますが、2014年02月18日現在DigitalOceanで提供されているCentOS 6.5のimageには`rsync(1)`が入っていないため、インスタンス作成時にprovisionを走らせる事が出来ません。これを利用することで簡単にCentOS6.5+Dockerが利用可能になります。
  * 安く、SSDで高速な開発環境を簡単に構築できます。
 
 ## 事前準備
@@ -22,11 +22,11 @@ Macでの利用を想定した手順になっています。
 
 ### Vagrantをインストール
 
-[Vagrant](http://www.vagrantup.com/)からファイルをダウンロードしてインストール。2013/12/19現在最新の`1.4.1`を利用してます。
+[Vagrant](http://www.vagrantup.com/)からファイルをダウンロードしてインストール。2014/02/18現在最新の`1.4.3`を利用してます。
 
 ###  [vagrant-digitalocean](https://github.com/smdahlen/vagrant-digitalocean)のインストール
 
-vagrantコマンドでvagrant-digitaloceanをインストール。vagrant-digitaloceanは2013/12/19現在最新の`0.5.1`を利用
+vagrantコマンドでvagrant-digitaloceanをインストール。vagrant-digitaloceanは2014/02/18現在最新の`0.5.3`を利用
 
 ``` sh
 vagrant plugin install vagrant-digitalocean
@@ -54,7 +54,7 @@ brew install curl-ca-bundle
     * `provider.client_id`には準備で作成した`client_id`を設定
     * `provider.api_key`には準備で作成した`api_key`を設定
     * `provider.ssh_key_name`には準備で作成したssh鍵名を指定
-    * regionは日本からのレスポンスが良い`San Francisco 1`、sizeはDockerを利用するのに快適な`1GB`に設定しています。2013/12/19現在size`1GB`のインスタンス(Droplet)は1時間2円弱(0.015ドル)です。売り切れの場合などは必要に応じて適時変更してください
+    * regionは日本からのレスポンスが良い`Singapore 1`、sizeはDockerを利用するのに快適な`1GB`に設定しています。2014/02/18現在size`1GB`のインスタンス(Droplet)は1時間2円弱(0.015ドル)です。売り切れの場合などは必要に応じて適時変更してください
 
 1. `Vagrant up`でインスタンス(Droplet)の作成
 
