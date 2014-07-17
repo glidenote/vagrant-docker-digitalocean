@@ -5,13 +5,14 @@ Vagrant.configure('2') do |config|
     provider.client_id            = 'set_your_client_id'  # https://cloud.digitalocean.com/api_access で取得したclient_idを指定
     provider.api_key              = 'set_your_api_key'    # https://cloud.digitalocean.com/api_access で取得したapi_keyを指定
     provider.ssh_key_name         = 'set_your_ssh_key'    # https://cloud.digitalocean.com/ssh_keys   で設定したSSH鍵名を指定
+    provider.token                = 'set_your_token'      # https://cloud.digitalocean.com/settings/applications  で設定したtokenを指定
 
     override.ssh.private_key_path = '~/.ssh/id_rsa'
     override.vm.box               = 'digital_ocean'
     override.vm.box_url           = "https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box"
 
     provider.image                = 'CentOS 6.4 x64'
-    provider.region               = 'Singapore 1'
+    provider.region               = 'sgp1'
     provider.size                 = '1GB'
     provider.ca_path              = '/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt'
   end
